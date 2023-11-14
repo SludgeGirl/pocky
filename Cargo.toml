@@ -1,0 +1,21 @@
+[package]
+edition = "2018"
+readme = "README.md"
+name = "pocky"
+version = "0.1.0"
+
+[dependencies]
+cortex-m = "0.7"
+cortex-m-rt = "0.7"
+cortex-m-semihosting = "0.5"
+panic-halt = "0.2.0"
+
+[dependencies.tm4c123x-hal]
+version = "0.10.3"
+features = ["rt"]
+
+# this lets you use `cargo fix`!
+[[bin]]
+name = "pocky"
+test = false
+bench = false
